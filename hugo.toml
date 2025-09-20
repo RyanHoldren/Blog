@@ -41,13 +41,3 @@ pygmentsCodefencesGuessSyntax = true
   name = "Ryan Holdren"
   website = "holdren.ca"
   email = "ryan@holdren.ca"
-
-[[menu.main]]
-    name = "Blog"
-    url = ""
-    weight = 1
-
-[[menu.main]]
-    name = "About"
-    url = "about/"
-    weight = 3

@@ -46,7 +46,7 @@ Go back to QBittorrent, and click the "Preferences" button (it's got a gear abov
 1) Make sure you are in the “Downloads” section of the “Preferences”.
 2) Change the "Default Save Path" to `/mnt/chromeos/MyFiles/Downloads`.
 3) Enable "Use another path for incomplete torrents".
-4) Set the path to `~/Downloads` as the path.
+4) Set the path to `/tmp/` as the path.
 5) Click "Okay" to save your changes.
 
 **Note** that, unfortunately, directly downloading to your "Downloads" folder doesn't seem to work.
