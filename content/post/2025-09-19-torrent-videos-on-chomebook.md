@@ -78,13 +78,13 @@ INPUT="$1"
 if [ -f "$INPUT" ]; then
   if [[ "$INPUT" =~ \.(avi|mkv|mp4)$ ]]; then
     OUTPUT="${INPUT%.*}-transcode.${INPUT##*.}"
-    ffmpeg -i "$INPUT" -c:v copy -c:a pcm_s16le -ac 2 "$OUTPUT"
+    ffmpeg -i "$INPUT" -c:v copy -c:a flac -ac 2 -strict -2 "$OUTPUT"
   fi
 elif [ -d "$INPUT" ]; then
   for FILE in "$INPUT"/*.{avi,mkv,mp4}; do
     if [ -f "$FILE" ]; then
       OUTPUT="${FILE%.*}-transcode.${FILE##*.}"
-      ffmpeg -i "$FILE" -c:v copy -c:a pcm_s16le -ac 2 "$OUTPUT"
+      ffmpeg -i "$FILE" -c:v copy -c:a flac -ac 2 -strict -2 "$OUTPUT"
     fi
   done
 fi
