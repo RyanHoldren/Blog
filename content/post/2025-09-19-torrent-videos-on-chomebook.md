@@ -11,8 +11,6 @@ Before you dive in, a quick but important heads-up: while the technology of torr
 
 Follow [this guide](https://support.google.com/chromebook/answer/9145439?hl=en) to set up Linux on your Chromebook. Once it's set up, a terminal should open automatically.
 
-Make sure you give Linux *at least* **10 gigabytes** of disk space. This space will be used while torrents are downloading, but not once they are done. The amount you need depends on how many torrents you plan to download at the same time and how large they are.
-
 ## Step #2: Install QBittorrent
 
 [QBittorrent](https://www.qbittorrent.org/) is my preferred torrent client to install on a Chromebook for three reasons:
@@ -45,11 +43,11 @@ Go back to QBittorrent, and click the "Preferences" button (it's got a gear abov
 
 1) Make sure you are in the “Downloads” section of the “Preferences”.
 2) Change the "Default Save Path" to `/mnt/chromeos/MyFiles/Downloads`.
-3) Enable "Use another path for incomplete torrents".
-4) Set the path to `/tmp/` as the path.
-5) Click "Okay" to save your changes.
-
-**Note** that, unfortunately, directly downloading to your "Downloads" folder doesn't seem to work.
+3) Go to the "Advanced" section of the “Preferences”.
+4) Find the "Disc I/O Type" option in the list.
+5) Change the value to "POSIX-compliant".
+6) Click "Okay" to save your changes.
+7) Restart QBittorrent so that the changes take effect.
 
 ## Step #6: Install FFmpeg
 
@@ -76,15 +74,18 @@ Open the "Text" app and copy the following code:
 INPUT="$1"
 
 if [ -f "$INPUT" ]; then
-  if [[ "$INPUT" =~ \.(avi|mkv|mp4)$ ]]; then
-    OUTPUT="${INPUT%.*}-transcode.${INPUT##*.}"
-    ffmpeg -i "$INPUT" -c:v copy -c:a flac -ac 2 -strict -2 "$OUTPUT"
+  OUTPUT="${INPUT%.*}-transcode.${INPUT##*.}"
+  if [[ "$INPUT" =~ \.avi$ ]]; then
+    ffmpeg -i "$INPUT" -c:v copy -c:a pcm_s16le -ac 2 "$OUTPUT"
+  elif [[ "$INPUT" =~ \.mkv$ ]]; then
+    ffmpeg -i "$INPUT" -c:v copy -c:a pcm_s16le -ac 2 "$OUTPUT"
+  elif [[ "$INPUT" =~ \.mp4$ ]]; then
+    ffmpeg -i "$INPUT" -c:v copy -c:a libvorbis -ac 2 "$OUTPUT"
   fi
 elif [ -d "$INPUT" ]; then
   for FILE in "$INPUT"/*.{avi,mkv,mp4}; do
     if [ -f "$FILE" ]; then
-      OUTPUT="${FILE%.*}-transcode.${FILE##*.}"
-      ffmpeg -i "$FILE" -c:v copy -c:a flac -ac 2 -strict -2 "$OUTPUT"
+      "$0" "$FILE"
     fi
   done
 fi
