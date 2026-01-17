@@ -25,19 +25,16 @@ pygmentsCodefencesGuessSyntax = true
   delayDisqus = false
   showRelatedPosts = false
 
-#[[Params.bigimg]]
-#  src = "img/triangle.jpg"
-#  desc = "Triangle"
-#[[Params.bigimg]]
-#  src = "img/sphere.jpg"
-#  desc = "Sphere"
-#  # position: see values of CSS background-position.
-#  position = "center top"
-#[[Params.bigimg]]
-#  src = "img/hexagon.jpg"
-#  desc = "Hexagon"
-
 [Params.author]
   name = "Ryan Holdren"
   website = "holdren.ca"
   email = "ryan@holdren.ca"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [["\\[","\\]"], ["$$","$$"]]
+          inline = [["\\(","\\)"]]

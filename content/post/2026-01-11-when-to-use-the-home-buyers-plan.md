@@ -22,11 +22,9 @@ To answer this question, let's first reframe _how_ we think about the RRSP. Inst
 
 - Then there is the **government's share** of your RRSP: the portion that ultimately ends up being remitted as income tax, at time of withdrawal. The growth of this share accrues entirely to the government.
 
-```
 Let `X` = your marginal tax rate at the time of withdrawal.
-```
 
-How much of your RRSP is your share and how much of it is the government's? We can model it, however; we can say with certainty that your share is `1 - X` and the government's is the remaining `X`.
+How much of your RRSP is your share and how much of it is the government's? We can model it, however; we can say with certainty that your share is `100% - X` and the government's is the remaining `X`.
 
 For example, if your marginal tax rate when you withdraw will be 25%, then one-quarter of the _present_ value of your RRSP effectively belongs to the government, and any growth on that quarter likewise accrues to the government. The remaining three-quarters are yours, and will grow tax-free inside the plan, like a TFSA.
 
@@ -44,10 +42,8 @@ Reframed in this way, it's clear that what you have gained is that you got to bo
 
 ## Analysis
 
-```
-Let `rₚ` = your _current_ **pre‑tax** rate of return **inside** your RRSP.
-Let `rₘ` = your _current_ **after‑tax** rate of return **outside** your RRSP.
-```
+- Let `rₚ` = your _current_ **pre‑tax** rate of return **inside** your RRSP.
+- Let `rₘ` = your _current_ **after‑tax** rate of return **outside** your RRSP.
 
 **Note** that if you are using the HBP to make a larger down payment, then `rₘ` is just the interest rate on your mortgage. Your current marginal tax rate is irrelevant in this case, because debt repayment is effectively a tax-free investment.
 
@@ -57,27 +53,25 @@ Let’s compare two options:
 
 1) You could borrow one dollar from your RRSP via the HBP and invest it outside your RRSP for _exactly_ one year, then you pay back the dollar. The benefit of this option is that the dollar will grow at `rₘ`. At the end of the year, you will have gained `$1 × rₘ`. 
 
-2) Alternatively, you could leave the dollar in your RRSP. The benefit of this option is that _your_ share of that dollar will grow at `rₚ`. At the end of the year, you will have gained `$1 × (1 - X)rₚ`.
+2) Alternatively, you could leave the dollar in your RRSP. The benefit of this option is that _your_ share of that dollar will grow at `rₚ`. At the end of the year, you will have gained `$1 × (100% - X)rₚ`.
 
 You will notice that I've reduced the problem to a single period. This simplifies the problem greatly, and I think it's _technically_ valid, since you can repay the HBP in full at any time, so you really do have the option to unwind if `rₚ` or `rₘ` change.
 
 We can therefore say that the HBP is beneficial if:
 
-```
-rₘ > (1 - X)(rₚ)
-rₘ > rₚ - X * rₚ
-rₘ - rₚ > 0 - X * rₚ
-rₚ - rₘ < X * rₚ
-(rₚ - rₘ) / rₚ < X
-X > (rₚ - rₘ) / rₚ
-```
+$$r_m > (1 - X) r_p$$
+$$r_m > r_p - X r_p$$
+$$r_m - r_p > - X r_p$$
+$$r_p - r_m < X r_p$$
+$$\frac{r_p - r_m}{r_p} < X$$
+$$X > \frac{r_p - r_m}{r_p}$$
 
 I put together [a table of the break-even value of `X`](https://docs.google.com/spreadsheets/d/1Ck4-MDGYVKNFdqdOIjWDF7aFTzN6NDA6kBsNHBxMl04/edit?usp=sharing) for different values of `rₚ` and `rₘ`.
 
-For example, at the time of writing, the financial planning assumptions of PWL Capital suggest that an all-equity portfolio can be expected to return around 7% before-tax, net-of-fees. Meanwhile, fixed five-year mortgage rates are around 4%. Substituting those values for `rₚ` and `rₘ` respectively, you can see that the break-even value of `X` is about 43%. This means that if your marginal tax rate at the time of withdrawal will be _above_ 43%, then you _should_ use the HBP to make a larger down payment. On the other hand, if your marginal tax rate at the time of withdrawal will be _below_ 43%, you'd be better off leaving the money in your RRSP.
+For example, at the time of writing, [the financial planning assumptions of PWL Capital](https://pwlcapital.com/financial-planning-assumptions-market-capitalization-weighted-portfolio/) suggest that an all-equity portfolio can be expected to return around 7% before-tax, net-of-fees. Meanwhile, fixed five-year mortgage rates are around 4%. Substituting those values for `rₚ` and `rₘ` respectively, you can see that the break-even value of `X` is about 43%. This means that if your marginal tax rate at the time of withdrawal will be _above_ 43%, then you _should_ use the HBP to make a larger down payment. On the other hand, if your marginal tax rate at the time of withdrawal will be _below_ 43%, you'd be better off leaving the money in your RRSP.
 
 ## Leverage
 
-One observation worth noting and considering is how, depending on what you do with your HBP loan, you are effectively leveraging or deleveraging. If you borrow via the HBP to increase your down payment by a dollar, your net debt has decreased by `$1 × (1 - X)`. On the other hand, if you invest the dollar in a non-registered account, your net debt has increased by `$1 × X`.
+One observation worth noting and considering is how, depending on what you do with your HBP loan, you are effectively leveraging or deleveraging. If you borrow via the HBP to increase your down payment by a dollar, your net debt has decreased by `$1 × (100% - X)`. On the other hand, if you invest the dollar in a non-registered account, your net debt has increased by `$1 × X`.
 
 If you are not going to use the HBP to increase the size of your downpayment, but instead are going to invest it in a non-registered account, you are using leverage. This should be taken into consideration, since leverage will magnify your risk.
