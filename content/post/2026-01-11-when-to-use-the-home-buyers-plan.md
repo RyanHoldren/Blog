@@ -74,10 +74,10 @@ X > (rₚ - rₘ) / rₚ
 
 I put together [a table of the break-even value of `X`](https://docs.google.com/spreadsheets/d/1Ck4-MDGYVKNFdqdOIjWDF7aFTzN6NDA6kBsNHBxMl04/edit?usp=sharing) for different values of `rₚ` and `rₘ`.
 
-For example, at the time of writing, The financial planning assumptions of PWL Capital suggest that an all-equity portfolio can be expected to return around 7% before-tax, net-of-fees. Meanwhile, fixed five-year mortgage rates are around 4%. Substituting those values for `rₚ` and `rₘ` respectively, you can see that the break-even value of `X` is about 43%. This means that if your marginal tax rate in retirement will be _above_ 43%, then you _should_ use the HBP to make a larger downpayment. On the other hand, if your marginal tax rate in retirement will be _below_ 43%, you'd be better off leaving the money in your RRSP.
+For example, at the time of writing, the financial planning assumptions of PWL Capital suggest that an all-equity portfolio can be expected to return around 7% before-tax, net-of-fees. Meanwhile, fixed five-year mortgage rates are around 4%. Substituting those values for `rₚ` and `rₘ` respectively, you can see that the break-even value of `X` is about 43%. This means that if your marginal tax rate at the time of withdrawal will be _above_ 43%, then you _should_ use the HBP to make a larger down payment. On the other hand, if your marginal tax rate at the time of withdrawal will be _below_ 43%, you'd be better off leaving the money in your RRSP.
 
 ## Leverage
 
-One observation worth noting and considering is how, depending on what you do with your HBP loan, you are effectively leveraging or deleveraging. If you borrow via the HBP to increase your downpayment by a dollar, your net debt has decreased by `$1 × (1 - X)`. On the other hand, if you invest the dollar in a non-registered account, your net debt has increased by `$1 × X`.
+One observation worth noting and considering is how, depending on what you do with your HBP loan, you are effectively leveraging or deleveraging. If you borrow via the HBP to increase your down payment by a dollar, your net debt has decreased by `$1 × (1 - X)`. On the other hand, if you invest the dollar in a non-registered account, your net debt has increased by `$1 × X`.
 
 If you are not going to use the HBP to increase the size of your downpayment, but instead are going to invest it in a non-registered account, you are using leverage. This should be taken into consideration, since leverage will magnify your risk.
