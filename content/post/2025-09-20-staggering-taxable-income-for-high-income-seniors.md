@@ -3,11 +3,11 @@ date = '2025-09-20T21:00:00-07:00'
 title = 'Staggering Taxable Income for High-income Seniors'
 +++
 
-### Disclaimer
+## Disclaimer
 
 I'm not a tax professional, accountant, or financial advisor. I am not even retired. This blog post is for informational and educational purposes only. It's not intended to be a substitute for personalized and professional tax advice.
 
-### Chart
+## Chart
 
 I created a [spreadsheet](https://docs.google.com/spreadsheets/d/1o_nkRUMTlXDGkEafr9_s8jEyAyMrmv1DGrK7Otn53x4/edit?usp=sharing) that combines [the provincial and federal tax brackets for British Columbia](https://www.taxtips.ca/taxrates/bc.htm) with [the clawback on Old Age Security Benefits](https://www.taxtips.ca/seniors/oas-clawback.htm). This was done to determine the **effective** *marginal* tax rate for high-income seniors in British Columbia.
 
@@ -15,11 +15,11 @@ I created a [spreadsheet](https://docs.google.com/spreadsheets/d/1o_nkRUMTlXDGkE
 
 **Note** that this chart assumes that Old Age Security has been delayed until age 70 and the recipient is eligible for the maximum amount.
 
-### Observation
+## Observation
 
 An interesting observation from the chart is the decline in the effective marginal tax rate at $172,624, which is the income level where Old Age Security benefits are fully clawed back. This shows that the income tax system for seniors is not *perfectly* [progressive](https://en.wikipedia.org/wiki/Progressive_tax). One implication is that high-income seniors may end up paying less tax on average if they are able to strategically stagger their income over multiple years.
 
-### Hypothetical Scenario
+## Hypothetical Scenario
 
 Let's consider two hypothetical retirees, Bob and Alice.
 
@@ -43,7 +43,7 @@ Note that both Alice and Bob are able to spend $110,000 per year on average. How
 
 Please note that this hypothetical was carefully chosen to illustrate the potential tax savings and the outcome is **not** generalizable to all levels of taxable income; tax rates for seniors are *mostly* progressive, after all.
 
-### Conclusion
+## Conclusion
 
 The hypothetical case of Bob and Alice uses RRIF withdrawals to demonstrate how staggering taxable income in retirement *could* lower total tax paid, but there's nothing special about RRIFs for this purpose; any type of taxable income that you have some control over is potentially in play.
 
