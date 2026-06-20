@@ -1,5 +1,5 @@
 ---
-title: "Giving Your Personal AI Agent a Database"
+title: "Your AI Agent Doesn't Need a Smarter Model. It Needs a Database."
 date: 2026-06-03
 author: "Ryan Holdren"
 ---
